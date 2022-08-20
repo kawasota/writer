@@ -1,0 +1,13 @@
+// Length patarn a (1440px)
+@function lg_a($value) {
+  $value_var: #{ 100 / 1440 * $value} + vw ;
+  @return #{$value_var};
+}
+
+// Length patarn b (375px)
+@function lg_b($value) {
+  $value_var: #{ 100 / 375 * $value} + vw ;
+  @return #{$value_var};
+}
+
+

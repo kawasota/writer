@@ -1,0 +1,72 @@
+@forward '../../foundation/variable';
+@use '../../foundation/variable' as v;
+
+@forward '../../utility/length';
+@use '../../utility/length'as l;
+
+@forward '../../foundation/mixin';
+@use '../../foundation/mixin' as m;
+
+
+.top-container {
+  max-width: 1262px;
+  width: l.lg_a(1262);
+  margin: 0 auto;
+
+  @include m.mq-down('sp_a') {
+    width: l.lg_b(335);
+    margin: 0 auto;
+  }
+}
+
+  .portfolio-img {
+    width: min( l.lg_a(580), 580px);
+    display: block;
+    margin: 0 auto;
+
+    @include m.mq-down('sp_a') {
+      width: l.lg_b(203);
+      margin-left: l.lg_b(62);
+    }
+  }
+
+  .name {
+    font-family: v.$font_a;
+    font-size: v.fs_a(140);
+    color: v.$color-top-name;
+    margin-top: max( l.lg_a(-310),-310px);
+
+    @include m.mq-down('sp_a') {
+      font-size: v.fs_b(49);
+      margin-top: l.lg_b(-53);
+      margin-left: l.lg_b(5);
+    }
+  }
+
+    .last-name {
+      margin-left: l.lg_a(-18);
+    }
+
+    .first-name{
+      display: block;
+      text-align: right;
+
+      @include m.mq-down('sp_a') {
+        margin-top: l.lg_b(9);
+        margin-right: l.lg_b(15);
+      }
+    }
+
+      .job {
+        text-align: center;
+        font-family: v.$font_b;
+        font-size: v.fs_a(18);
+        color: v.$color-top-job;
+        margin-top: min( l.lg_a(91),91px);
+        letter-spacing: 0.1em;
+
+        @include m.mq-down('sp_a') {
+          font-size: v.fs_b(12);
+          margin-top: l.lg_b(33);
+        }
+      }

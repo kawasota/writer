@@ -1,0 +1,126 @@
+@forward '../../foundation/variable';
+@use '../../foundation/variable' as v;
+
+@forward '../../utility/length';
+@use '../../utility/length'as l;
+
+@forward '../../foundation/mixin';
+@use '../../foundation/mixin' as m;
+
+
+.flow {
+  margin-top: min( l.lg_a(319), 319px);
+
+  &-container {
+    max-width: 1144px;
+    width: l.lg_a(1144);
+    margin: 0 auto;
+
+    @include m.mq-down('sp_b') {
+      max-width: 930px;
+      width: l.lg_a(930);
+      margin: 0 auto;
+    }
+
+    @include m.mq-down('sp_a') {
+      width: l.lg_b(335);
+      margin: 0 auto;
+      padding-top: l.lg_b(66);
+    }
+  }
+
+    &-heading {
+      font-size: v.fs_a(29);
+
+      @include m.mq-down('sp_a') {
+        font-size: v.fs_b(16);
+      }
+    }
+  
+      &-list {
+        margin-top: min( l.lg_a(54), 54px);
+        display: flex;
+        overflow-x: scroll;
+        max-width: 1440px;
+        width: calc( 50% + 50vw );
+
+        @include m.mq-down('sp_a') {
+          margin-top: l.lg_b(18);
+        }
+
+        &-item {
+          width: min( l.lg_a(360), 360px);
+          flex-basis: min( l.lg_a(360), 360px);
+          flex-shrink:0;
+
+          @include m.mq-down('sp_a') {
+            width: 35.2vw;
+            flex-basis: auto;
+          }
+
+        &:nth-child(2){
+          margin-left: min( l.lg_a(29), 29px);
+
+          @include m.mq-down('sp_a') {
+            margin-left: l.lg_b(11);
+          }
+        }
+
+        &:nth-child(3){
+          margin-left: min( l.lg_a(34), 34px);
+
+          @include m.mq-down('sp_a') {
+            margin-left: l.lg_b(11);
+          }
+        }
+
+        &:nth-child(4){
+          margin-left: min( l.lg_a(32), 32px);
+
+          @include m.mq-down('sp_a') {
+            margin-left: l.lg_b(11);
+          }
+        }
+        }
+
+        &-desc {
+          font-family: v.$font_e;
+          font-size: v.fs_a(22);
+          color: v.$color-flow-part;
+          margin-top: 1em; 
+
+          @include m.mq-down('sp_a') {
+            margin-top: 1.1em;
+          }
+
+        &-analysis {
+          margin-left: 0.2em;
+        }
+
+        &-operation {
+          margin-left: -0.3em;
+        }        
+        }
+      }
+  }
+
+      .section-copy-flow {
+        margin-top: 1.97em;
+
+        @include m.mq-down('sp_a') {
+          margin-top: l.lg_b(44);
+          white-space: nowrap;
+          line-height: 1.7;
+          font-size: v.fs_b(23);
+        }
+      }
+
+      .section-copy-desc-flow {
+        margin-top: 3.05em;
+
+        @include m.mq-down('sp_a') {
+          margin-top: 2.6em;
+          font-size: v.fs_b(10);
+          line-height: 1.6;
+        }
+      }

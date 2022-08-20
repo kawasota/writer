@@ -1,0 +1,13 @@
+// foundation/common
+@use 'foundation/common';
+
+
+// index.html  - section ( top ~ contact )
+@use 'section/index.html/top';
+@use 'section/index.html/about';
+@use 'section/index.html/works';
+@use 'section/index.html/flow';
+@use 'section/index.html/contact';
+
+// thanks.html
+@use 'section/thanks.html/thankyou';

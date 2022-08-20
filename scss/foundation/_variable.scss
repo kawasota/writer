@@ -1,0 +1,116 @@
+// * Font * //
+// * Color * //
+// * Media Query * //
+
+
+
+////////////// Font ////////////// 
+
+// - Font A
+$font_a: 'Montserrat', sans-serif;
+
+// - Font B
+$font_b: aktiv-grotesk-extended, sans-serif;
+
+// - Font C
+$font_c: 'Noto Sans JP', sans-serif;
+
+// - Font D
+$font_d: YuGothic, "Yu Gothic", Meiryo, sans-serif;
+
+// - Font E
+$font_e: YuGothic, "Yu Gothic Medium", "Yu Gothic", Meiryo, sans-serif;
+
+// - Font F
+$font_f: dnp-shuei-gothic-kin-std, sans-serif;
+
+// - Font G
+$font_g: serif;
+
+
+// Font size patarn A
+@function fs_a($value) {
+  $value_var: #{ 100 / 1440 * $value } + vw;
+  $value_max: $value + px;
+  @return min(#{$value_var},#{$value_max});
+}
+
+// Font size patarn B
+@function fs_b($value) {
+  $value_var: #{ 100 / 375 * $value } + vw;
+  @return #{$value_var};
+}
+
+
+
+
+////////////// Color ////////////// 
+
+// Palette
+$palette-moonmist:#DBD7C7;
+$palette-mine_shaft: #2B2B2B;
+$palette-mine_shaft_b: #222222;
+$palette-white: #FFFFFF;
+$palette-black: #000000;
+$palette-gallery: #F0F0F0;
+$palette-silver_chalice: #9D9D9D;
+$palette-alto: #D1D1D1;
+$palette-cod_gray: #1A1A1A;
+$palette-pale_canary:#FFFF9D;
+
+
+// Color of common
+$color-backgroud: $palette-moonmist;
+$color-heading: $palette-white;
+$color-section-copy: $palette-mine_shaft_b;
+$color-section-copydesc: $palette-mine_shaft_b;
+$color-section-bottomline: $palette-silver_chalice;
+
+// Color of section
+
+// - top
+$color-top-name: $palette-white;
+$color-top-job: $palette-mine_shaft_b;
+
+// - about
+$color-about-tag: $palette-black;
+
+// - works
+$color-works-desc: $palette-mine_shaft_b;
+$color-works-imgcover: $palette-mine_shaft;
+$color-works-imgcap: $palette-white;
+$color-works-client: $palette-black;
+$color-works-category: $palette-black;
+$color-works-backofcategory: $palette-gallery;
+$color-works-status: $palette-black;
+$color-works-casedesc: $palette-black;
+
+// - flow
+$color-flow-part: $palette-black;
+
+// - contact
+$color-contact-item: $palette-cod_gray;
+$color-contact-requiredtag: $palette-mine_shaft_b;
+$color-contact-option: $palette-mine_shaft_b;
+$color-contact-option_b: $palette-white;
+$color-contact-form: $palette-white;
+$color-contact-border: $palette-mine_shaft_b;
+$color-contact-border-focus: $palette-white;
+$color-contact-placeholder: $palette-alto;
+$color-contact-personalinfo: $palette-mine_shaft_b;
+$color-contact-send: $palette-mine_shaft_b;
+
+
+// -thankyou
+$color-thankyou-btn_a: $palette-white;
+$color-thankyou-btn_b: $palette-black;
+
+
+////////////// Media Query ////////////// 
+
+$breakpoint-down: (
+"sp_a": "(max-width: 506px)",
+"sp_b": "(max-width: 630px)",
+"md": "(max-width: 855px)",
+);
+
